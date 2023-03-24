@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using SaleWebMVC.Data;
+using SaleWebMVC.Models.Interfaces;
+using SaleWebMVC.Models.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddDbContext<InvestigationJobContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("InvestigatiionJobDbContextConnection")));
 
 var app = builder.Build();
 

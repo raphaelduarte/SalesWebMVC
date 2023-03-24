@@ -18,7 +18,22 @@ namespace SaleWebMVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Estatisticas()
+        {
+            return View();
+        }
+
+        public IActionResult MercadoDeInvestigacoes()
+        {
+            return View();
+        }
+
+        public IActionResult Configuracoes()
+        {
+            return View();
+        }
+
+        public IActionResult Conta()
         {
             return View();
         }
